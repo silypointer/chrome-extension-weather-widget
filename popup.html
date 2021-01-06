@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Weather Widget</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="getWeather.js"></script>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  
+    <style type="text/css">
+        .container {
+            width: 500px;
+            border: 1px solid #000;
+            padding: 4px;
+            background-image: url("images/background.jpg");
+        }
+        .title_text {
+            padding: 5px;
+            color: #F1EAE3;
+            font : var(--devsite-h1-font,300 34px/40px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif);
+            
+        }
+        .result {
+            padding: 5px;
+            margin: 7px;
+            border: 1px solid #222;
+            
+            color: #222;
+            font : var(--devsite-h1-font,300 34px/40px Roboto,Noto Sans,Noto Sans JP,Noto Sans KR,Noto Naskh Arabic,Noto Sans Thai,Noto Sans Hebrew,Noto Sans Bengali,sans-serif);
+            
+        }
+        .result h4 {
+            color: #F1EAE3;
+        }
+        .fl {
+            float: left;
+        }
+        #city, #search {
+            margin: 5px 0 0 0;
+        }
+        .note {
+            color: #0769ad;
+            text-decoration: underline;
+            left: 0px;
+            color: #F1EAE3;
+        }
+        .note_desc {
+            color: #FFFFEC;
+        }
+        .res-label {
+            font-weight: 700;
+        }
+    </style>
+  </head>
+  <body>
+      <div class ="container container-fluid  text-center ">
+        <div class="title_text">
+            <h4>Weather Widget <span class="city"></span> </h4>
+        </div>
+        <div>
+            <form id="search_form">
+                <div class="form-group">
+                    <div class="col-sm-4">
+                        <input class="form-control form-control-lg" type="text" id="city" placeholder="Search City to get its current weather" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-4">
+                    <button id="search" type="submit" class="btn btn-primary">Get Weather</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <div class="result ">
+        <h4>Result </h4>
+        <div class="row">
+            <div class="grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                    <h5 class="text-muted font-weight-normal">Local Time</h5>
+                    <h3 class=" localTime mb-0"></h3>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                    <h5 class="text-muted font-weight-normal">Local Temperature</h5>
+                    <h3 class="currentTemp mb-0"></h3>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                    <h5 class="text-muted font-weight-normal">Local Weather Description</h5>
+                    <h3 class="currentDesc mb-0"></h3>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="">
+        <div class="note " >Note</div>
+        <div class="note_desc">
+          <p>
+            Its a free api, please dont missuse it.
+          </p>
+          <p>Quota of 1 minute per 1 request is applied, :)</p>
+        </div>
+    </div>
+
+    </div>
+  </body>
+</html>
