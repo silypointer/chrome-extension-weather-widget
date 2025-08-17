@@ -1,17 +1,26 @@
-// Configuration file for Weather Widget
-const WEATHER_CONFIG = {
+// Configuration file for Weather Widget Chrome Extension
+// Store your API keys and other configuration here
+
+const config = {
     // OpenWeatherMap API Configuration
-    OPENWEATHER_API_KEY: 'c4c74eb04d0ff52473174719f5636805', // Get your free API key from https://openweathermap.org/api
+    openWeatherMap: {
+        apiKey: 'c4c74eb04d0ff52473174719f5636805', // Replace with your actual API key
+        baseUrl: 'https://api.openweathermap.org/data/2.5/weather',
+        units: 'metric',
+        language: 'en'
+    },
     
-    // API Endpoints
-    WEATHER_API_URL: 'https://api.openweathermap.org/data/2.5/weather',
-    
-    // Default settings
-    DEFAULT_UNITS: 'metric', // metric, imperial, or kelvin
-    DEFAULT_LANGUAGE: 'en'   // language for weather descriptions
+    // Extension Configuration
+    extension: {
+        name: 'Weather Widget',
+        version: '1.0.0'
+    }
 };
 
 // Export for use in other files
 if (typeof module !== 'undefined' && module.exports) {
-    module.exports = WEATHER_CONFIG;
+    module.exports = config;
+} else {
+    // For browser/Chrome extension use
+    window.weatherWidgetConfig = config;
 } 
