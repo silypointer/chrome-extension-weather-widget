@@ -28,16 +28,7 @@ jQuery(document).ready(function() {
         // Get API key from config file
         var apiKey = window.weatherWidgetConfig.openWeatherMap.apiKey;
         
-        // Check if API key is configured
-        if (!apiKey || apiKey === 'YOUR_API_KEY_HERE' || apiKey === 'c4c74eb04d0ff52473174719f5636805') {
-            alert("Please configure your OpenWeatherMap API key!\n\n" +
-                  "1. Visit: https://openweathermap.org/api\n" +
-                  "2. Sign up for a free account\n" +
-                  "3. Get your API key\n" +
-                  "4. Replace the API key in config.js with your actual key\n\n" +
-                  "Note: New API keys may take a few hours to activate.");
-            return false;
-        }
+        
         
         // Using OpenWeatherMap API (free tier)
         var url = window.weatherWidgetConfig.openWeatherMap.baseUrl + '?q=' + encodeURIComponent(city) + 

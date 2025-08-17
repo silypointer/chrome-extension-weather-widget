@@ -4,7 +4,7 @@
 const config = {
     // OpenWeatherMap API Configuration
     openWeatherMap: {
-        apiKey: 'c4c74eb04d0ff52473174719f5636805', // Replace with your actual API key
+        apiKey: '', // Replace with your actual API key
         baseUrl: 'https://api.openweathermap.org/data/2.5/weather',
         units: 'metric',
         language: 'en'
