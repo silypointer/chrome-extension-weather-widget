@@ -1,7 +1,7 @@
 // Configuration file for Weather Widget
 const WEATHER_CONFIG = {
     // OpenWeatherMap API Configuration
-    OPENWEATHER_API_KEY: 'key', // Get your free API key from https://openweathermap.org/api
+    OPENWEATHER_API_KEY: 'c4c74eb04d0ff52473174719f5636805', // Get your free API key from https://openweathermap.org/api
     
     // API Endpoints
     WEATHER_API_URL: 'https://api.openweathermap.org/data/2.5/weather',
